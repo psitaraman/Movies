@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by Praveen Sitaraman on 5/17/17.
+  Copyright © 2017 Praveen Sitaraman. All rights reserved.
+*/
+
+"searchBar.placeholder.text" = "Enter Movie Search Term...";
+"error.generic.message" = "An error occured. Please try again with valid inputs.";
+"error.noItemsFound.message" = "No items were found for your search request.";
+"alert.cta.ok" = "OK";
+"movie.popularity.title" = "Popularity: %.2f";
+"movie.voterAverage.title" = "Voter Avg.: %.2f";
+"movie.language.title" = "Original Language: %@";
+"movie.releaseDate.title" = "Release Date: %@";
