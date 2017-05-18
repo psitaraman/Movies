@@ -10,12 +10,6 @@ import UIKit
 
 final class MoviesViewController: UITableViewController {
     
-    //MARK: - Types
-    
-    fileprivate enum ScopeType: Int {
-        case current, weekly
-    }
-    
     //MARK: - Properties
     
     private lazy var searchController: UISearchController = {
@@ -40,7 +34,6 @@ final class MoviesViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 64.0
-        self.navigationController?.hidesBarsOnSwipe = true
         self.tableView.keyboardDismissMode = .onDrag
         self.tableView.prefetchDataSource = self
         
@@ -51,7 +44,7 @@ final class MoviesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.navigationController?.hidesBarsOnSwipe = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -156,6 +149,19 @@ final class MoviesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard indexPath.row < self.movies.count else { return }
+        let movie = self.movies[indexPath.row]
+        _ = FetchMovieDetails(movieId: String(describing: movie.identifier)) { (details, error) in
+            Thread.executeOnMainThread {
+                
+                guard let movieDetails = details else { return }
+                // present detail screen
+                let movieDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+                movieDetailViewController.movie = movie
+                movieDetailViewController.movieDetails = movieDetails
+                self.navigationController?.pushViewController(movieDetailViewController, animated: true)
+            }
+        }
     }
 }
 

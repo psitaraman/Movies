@@ -26,6 +26,7 @@
 		E82331C81ECCE1C900F57692 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82331C71ECCE1C900F57692 /* MovieCellViewModel.swift */; };
 		E82331CA1ECD001200F57692 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82331C91ECD001200F57692 /* String+Utilities.swift */; };
 		E82331CC1ECD487900F57692 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82331CB1ECD487900F57692 /* MovieDetails.swift */; };
+		E82331D21ECDBF0E00F57692 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82331D11ECDBF0E00F57692 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		E82331C91ECD001200F57692 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		E82331CB1ECD487900F57692 /* MovieDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		E82331CE1ECD8E5A00F57692 /* Movies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movies-Bridging-Header.h"; sourceTree = "<group>"; };
+		E82331D11ECDBF0E00F57692 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				E823319A1ECCCE8100F57692 /* ViewController.swift */,
 				E82331C11ECCE04600F57692 /* MoviesViewController.swift */,
+				E82331D11ECDBF0E00F57692 /* MovieDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				E82331BA1ECCDE4800F57692 /* FetchMovies.swift in Sources */,
 				E82331CA1ECD001200F57692 /* String+Utilities.swift in Sources */,
 				E82331B21ECCD3F100F57692 /* Thread+Utilites.swift in Sources */,
+				E82331D21ECDBF0E00F57692 /* MovieDetailViewController.swift in Sources */,
 				E82331991ECCCE8100F57692 /* AppDelegate.swift in Sources */,
 				E82331B81ECCDE2300F57692 /* MovieDBRequest.swift in Sources */,
 				E82331B61ECCD45000F57692 /* LocalizedStrings.swift in Sources */,

@@ -50,7 +50,7 @@ struct Movie {
     let pageData: PageData
     let identifier: Int
     let isAdult: Bool
-    let description: String
+    let verboseDescription: String
     let releaseDate: Date?
     let title: String
     let language: String
@@ -87,7 +87,7 @@ struct Movie {
         
         self.identifier = identifier
         self.isAdult = dictionary[Movie.Keys.adult] as? Bool ?? false
-        self.description = dictionary[Movie.Keys.overview] as? String ?? ""
+        self.verboseDescription = dictionary[Movie.Keys.overview] as? String ?? ""
         
         if let releaseDateString = dictionary[Movie.Keys.releaseDate] as? String {
             self.releaseDate = Movie.dateFormatter.date(from: releaseDateString)
